@@ -1,5 +1,5 @@
 ## Description
-Projec is building using [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository as part of plena-finace hiring assignment.
+Project is building using [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Installation & Setup
 It is assumed following are available on your machine.
@@ -45,7 +45,7 @@ CREATE INDEX idx_gin ON users USING gin (username gin_trgm_ops);
 
 
 ## Notes
-While the project implements all the functional requirements, I was not able to implement the Testing due to lack of time on my end as I was attending to a medical emergency.
+While the project implements all the functional requirements, I was not able to implement the Testing due to time constraint.
 - Please refer to swagger to take a quick look at DTOs and related routes.
 - You can generate an appropriate token using /users/token. It will only generate a valid token for users in the database. Based on the specifications of the project, token is not validated or checked for expiry
 - Database models are automatically synced, ideally having migrations would have been helpful but considering it is an assignment I have setup Sequelize to sync the models on application statup. Also don't forget to create the database index, likely to bring seconds of query time to milliseconds. Specially if you decide load millions of records into database. You can use `scripts/seed.ts`, however I am not sure how good faker would be in generating a million unique usernames.
